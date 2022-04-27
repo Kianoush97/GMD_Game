@@ -70,8 +70,6 @@ public class EnemyManager : MonoBehaviour
 
 
 
-
-
     //void spawnEnemySpike(GameObject enemy)
     //{
     //    GameObject a;
