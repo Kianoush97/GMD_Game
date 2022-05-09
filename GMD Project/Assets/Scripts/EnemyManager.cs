@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    //RandomSpawner
     public GameObject macePrefab;
     public GameObject sawPrefab;
-    public GameObject spikePrefab;
     public GameObject circleMacePrefab;
-
-    public float respawnTime = 0.3f;
+    public float respawnTime = 5f;
     private Vector2 screenBounds;
 
     private void Start()
@@ -38,54 +35,30 @@ public class EnemyManager : MonoBehaviour
         }
         a.transform.position = new Vector2(Random.Range(-screenBounds.x, screenBounds.x), (float)(screenBounds.y * 1.5));
 
-        //if(a.name.Equals("macePrefab"))
-        //    StartCoroutine(enemyShoot(a));
-
-        if (Player.score > 60)
-        {
-            if (Random.Range(1, 6) % 2 == 0)
-            {
-                b = Instantiate(spikePrefab);
-            }
-            else
-            {
-                b = Instantiate(circleMacePrefab);
-            }
-         
+        if (Player.score > 700)
+        {            
+            b = Instantiate(circleMacePrefab);
             b.transform.position = new Vector2(Random.Range(-screenBounds.x +3 , screenBounds.x -3), (float)(screenBounds.y * 2));
-        }    
+        } 
+
+        if (Player.score > 700 && Player.score < 1100)
+            respawnTime = 4f;
+
+        if (Player.score > 1500)
+            respawnTime = 2.5f;
     }
-
-
 
     IEnumerator enemy()
     {
         while (true)
         {
-            yield return new WaitForSeconds(respawnTime);
-            spawnEnemy();
+            if (Player.score > 20)
+            {
+                yield return new WaitForSeconds(respawnTime);
+                spawnEnemy();
+            }
+            yield return null;
         }
         
     }
-
-
-
-    //void spawnEnemySpike(GameObject enemy)
-    //{
-    //    GameObject a;
-    //    a = Instantiate(spikePrefab);
-    //    a.transform.position = enemy.transform.position;
-    //}
-
-    //IEnumerator enemyShoot(GameObject enemy)
-    //{        
-    //    while (true)
-    //    {
-    //        yield return new WaitForSeconds(respawnTime);
-    //        if (enemy == null)
-    //            yield break;
-    //        spawnEnemySpike(enemy);
-    //    }
-
-    //}
 }

@@ -171,6 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d3052be8c7fdd408e000da8cade0a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTime: 2
-  spikeRightPrefab: {fileID: 8496644477594366341, guid: 441f149b91f3a5e4ab129da3353a820c, type: 3}
-  spikeLeftPrefab: {fileID: 1900120557856368800, guid: a07ad5bcc82a91d4b9a4907a761b70fa, type: 3}
+  respawnTime: 3.5
+  shootRightPrefab: {fileID: 8496644477594366341, guid: 441f149b91f3a5e4ab129da3353a820c, type: 3}
+  shootLeftPrefab: {fileID: 1900120557856368800, guid: a07ad5bcc82a91d4b9a4907a761b70fa, type: 3}

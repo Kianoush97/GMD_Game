@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     private Rigidbody2D rb;
-    [SerializeField] private float horizontalVelocity = 10f;
-    [SerializeField] private float jumpForce = 8f;
+    [SerializeField] private float horizontalVelocity = 15f;
+    [SerializeField] private float jumpForce = 15f;
     public Animator animator;
     private float horizontalDirection = 0f;
     private SpriteRenderer sprite;
@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public Text scoreText;
     public Text topScoreText;
 
+    [SerializeField] private AudioSource jumpSound;
 
     void Start()
     {
@@ -29,19 +30,21 @@ public class Player : MonoBehaviour
     void Update()
     {
         horizontalDirection = Input.GetAxisRaw("Horizontal");
-        transform.rotation = Quaternion.Euler(0, 0, 0);       
+        transform.rotation = Quaternion.Euler(0, 0, 0);
 
-        if (score > 100)
+        if (score > 350 && score < 750)
         {
             jumpForce = 20;
             horizontalVelocity = 20;
         }
-
+        else if (score > 750)
+        {
+            jumpForce = 25;
+            horizontalVelocity = 25;
+        }
 
         PlayerMovement();
-
         UpdateAnimation();
-
         UpdateScore();
     }
 
@@ -50,6 +53,7 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            jumpSound.Play();
         }
 
         if (horizontalDirection > 0f)
@@ -96,7 +100,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy")
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             SceneManager.LoadScene("GameOverScene");
         }

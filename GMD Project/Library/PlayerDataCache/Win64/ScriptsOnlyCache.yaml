@@ -1,11 +1,13 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AudioManager
+    - BackgrondScroller
     - ButtonManager
     - CameraFollow
     - CollisionManager
     - EnemyManager
-    - ObjectMovement
+    - EnemyMovement
     - Player
     - Shoot
     - SpikeMovement
@@ -15,8 +17,6 @@ ScriptsOnlyBuild:
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
     - UnityEditor.U2D.IK.IKGizmos
-    Unity.2D.Sprite.Editor.dll:
-    - UnityEditor.U2D.Sprites.SpriteEditorWindow
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridBrushEditor
@@ -66,26 +66,30 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 1520}
     - Class: 114
-      Script: {instanceID: 2030}
+      Script: {instanceID: 2032}
     - Class: 114
-      Script: {instanceID: 2306}
+      Script: {instanceID: 2308}
     - Class: 114
-      Script: {instanceID: 2762}
+      Script: {instanceID: 2766}
     - Class: 114
-      Script: {instanceID: 2954}
+      Script: {instanceID: 2958}
     - Class: 114
-      Script: {instanceID: 3202}
+      Script: {instanceID: 3206}
     - Class: 114
-      Script: {instanceID: 3464}
+      Script: {instanceID: 3468}
     - Class: 114
-      Script: {instanceID: 3594}
+      Script: {instanceID: 3598}
     - Class: 114
-      Script: {instanceID: 5396}
+      Script: {instanceID: 5402}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -123,9 +127,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
+    - Class: 62
+      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -134,29 +144,37 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2306}
+      Script: {instanceID: 1520}
     - Class: 114
-      Script: {instanceID: 2762}
+      Script: {instanceID: 1834}
     - Class: 114
-      Script: {instanceID: 2954}
+      Script: {instanceID: 2032}
     - Class: 114
-      Script: {instanceID: 3202}
+      Script: {instanceID: 2308}
     - Class: 114
-      Script: {instanceID: 3464}
+      Script: {instanceID: 2766}
     - Class: 114
-      Script: {instanceID: 3864}
+      Script: {instanceID: 2958}
     - Class: 114
-      Script: {instanceID: 3982}
+      Script: {instanceID: 3206}
     - Class: 114
-      Script: {instanceID: 4046}
+      Script: {instanceID: 3468}
     - Class: 114
-      Script: {instanceID: 4096}
+      Script: {instanceID: 3598}
     - Class: 114
-      Script: {instanceID: 4994}
+      Script: {instanceID: 3868}
     - Class: 114
-      Script: {instanceID: 5912}
+      Script: {instanceID: 3986}
     - Class: 114
-      Script: {instanceID: 6134}
+      Script: {instanceID: 4050}
+    - Class: 114
+      Script: {instanceID: 4100}
+    - Class: 114
+      Script: {instanceID: 5000}
+    - Class: 114
+      Script: {instanceID: 5918}
+    - Class: 114
+      Script: {instanceID: 6140}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -192,6 +210,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -201,21 +223,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1520}
     - Class: 114
-      Script: {instanceID: 2030}
+      Script: {instanceID: 1834}
     - Class: 114
-      Script: {instanceID: 2306}
+      Script: {instanceID: 2032}
     - Class: 114
-      Script: {instanceID: 2762}
+      Script: {instanceID: 2308}
     - Class: 114
-      Script: {instanceID: 2954}
+      Script: {instanceID: 2766}
     - Class: 114
-      Script: {instanceID: 3202}
+      Script: {instanceID: 2958}
     - Class: 114
-      Script: {instanceID: 3464}
+      Script: {instanceID: 3206}
     - Class: 114
-      Script: {instanceID: 3594}
+      Script: {instanceID: 3468}
     - Class: 114
-      Script: {instanceID: 5396}
+      Script: {instanceID: 3598}
+    - Class: 114
+      Script: {instanceID: 4860}
+    - Class: 114
+      Script: {instanceID: 5402}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -339,6 +365,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: 43f0d03892c5561bb9fbbb2e0abc159a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AudioManager
+  - hash:
+      serializedVersion: 2
       Hash: 300fd99066f8c288e85f5e81ce65fe34
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -351,7 +383,7 @@ ScriptsOnlyBuild:
     className: CinemachineCameraOffset
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: c5dfccabb5d46d98e481b4acad1ac08b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonManager
@@ -403,6 +435,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.PixelPerfect.dll
     namespaceName: UnityEngine.U2D
     className: CinemachinePixelPerfect
+  - hash:
+      serializedVersion: 2
+      Hash: 930b2a7c015542327cee6af349728cdd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
   - hash:
       serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
@@ -657,7 +695,7 @@ ScriptsOnlyBuild:
     className: CinemachineSmoothPath
   - hash:
       serializedVersion: 2
-      Hash: 11c5e72458df5fe3deb0e1b2892e3190
+      Hash: 5739a0c83a068dcce19c8d97062d67c3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Shoot
@@ -675,7 +713,7 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
-      Hash: 95f0f440572bf1d1b0ee45d650a586dc
+      Hash: d35bec3a036c13d4b0acada02313d611
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyManager
@@ -861,6 +899,12 @@ ScriptsOnlyBuild:
     className: SpriteResolver
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BackgrondScroller
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -894,7 +938,7 @@ ScriptsOnlyBuild:
       Hash: afc5b93a7b192de2dcb3832fe35a5c7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ObjectMovement
+    className: EnemyMovement
   - hash:
       serializedVersion: 2
       Hash: 1e3d6222ff533d213aab144eb854a53b
@@ -1083,7 +1127,7 @@ ScriptsOnlyBuild:
     className: FabrikSolver2D
   - hash:
       serializedVersion: 2
-      Hash: ef228de2830922ca29b535df671939ba
+      Hash: 0ba9ccac89db4140e721e4995b76a8a3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player

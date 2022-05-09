@@ -12,13 +12,12 @@ public class CameraFollow : MonoBehaviour
     [SerializeField]
     public Transform background2;
 
-
     private void LateUpdate()
     {
-        if(targetToFollow.position.y > transform.position.y)
+        if(targetToFollow.position.y + 8 > transform.position.y)
         {
             Vector3 newPosition = new Vector3(transform.position.x,
-            targetToFollow.position.y, transform.position.z);
+            targetToFollow.position.y + 8, transform.position.z);
             transform.position = newPosition;
         }
 

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5963469478565890995}
   - component: {fileID: 7649516191190841548}
   - component: {fileID: 4653930760520220090}
-  - component: {fileID: 4512550819988952587}
   - component: {fileID: 5400137482130246538}
   - component: {fileID: 4327097555376703923}
+  - component: {fileID: 8864427819970457179}
+  - component: {fileID: 7013505879134622588}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Enemy
@@ -127,19 +128,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4512550819988952587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114360148742914551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d36b8db84476e546b7c53b0315a77f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
 --- !u!114 &5400137482130246538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,3 +156,31 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.56
+--- !u!114 &8864427819970457179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114360148742914551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d36b8db84476e546b7c53b0315a77f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.5
+--- !u!114 &7013505879134622588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114360148742914551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d3052be8c7fdd408e000da8cade0a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTime: 3.5
+  shootRightPrefab: {fileID: 2366875934670670128, guid: 78c70f61408606047962830246357246, type: 3}
+  shootLeftPrefab: {fileID: 2366875934670670128, guid: 78c70f61408606047962830246357246, type: 3}
