@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,10 +23,12 @@ public class AudioManager : MonoBehaviour
             AudioListener.volume =0;
         }
     }
+
     private void Update()
     {
         soundOn = PlayerPrefs.GetInt("soundOn", soundOn);
     }
+
     public void Audio()
     {
         if (soundOn == 1)

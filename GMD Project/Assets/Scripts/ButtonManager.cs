@@ -1,14 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject info;
-
 
     private void Update()
     {
@@ -68,5 +64,4 @@ public class ButtonManager : MonoBehaviour
             info.SetActive(false);
         }           
     }
-
 }

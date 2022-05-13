@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4327097555376703923}
   - component: {fileID: 8864427819970457179}
   - component: {fileID: 7013505879134622588}
+  - component: {fileID: 8342539974354778963}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Enemy
@@ -168,7 +169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d36b8db84476e546b7c53b0315a77f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
 --- !u!114 &7013505879134622588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +181,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d3052be8c7fdd408e000da8cade0a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnTime: 3.5
+  respawnTime: 4
   shootRightPrefab: {fileID: 2366875934670670128, guid: 78c70f61408606047962830246357246, type: 3}
   shootLeftPrefab: {fileID: 2366875934670670128, guid: 78c70f61408606047962830246357246, type: 3}
+--- !u!114 &8342539974354778963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114360148742914551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef87e488b6d83cb4ea84dd580ab0341a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

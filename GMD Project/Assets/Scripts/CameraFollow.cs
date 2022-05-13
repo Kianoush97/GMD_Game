@@ -1,16 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField]
-    private Transform targetToFollow;
-    [SerializeField]
-    public Transform background1;
-    [SerializeField]
-    public Transform background2;
+    [SerializeField] private Transform targetToFollow;
+    [SerializeField] private Transform background1;
+    [SerializeField] private Transform background2;
 
     private void LateUpdate()
     {
@@ -29,16 +24,14 @@ public class CameraFollow : MonoBehaviour
         if (transform.position.y >= background2.position.y)
         {
             background1.position = new Vector3(background1.position.x, background2.position.y + 55, background1.position.z);
-            switchBackground();
+            SwitchBackground();
 
         }
     }
 
-    private void switchBackground()
+    private void SwitchBackground()
     {
-        Transform tmp = background1;
-        background1 = background2;
-        background2 = tmp;
+        (background2, background1) = (background1, background2);
     }
 
     public void LoadGameOverScene()

@@ -3,20 +3,20 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - AudioManager
     - BackgrondScroller
+    - BulletMovement
     - ButtonManager
     - CameraFollow
     - CollisionManager
     - EnemyManager
     - EnemyMovement
+    - EnemyShoot
+    - GameDifficulty
     - Player
-    - Shoot
-    - SpikeMovement
     - TextManager
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridBrushEditor
@@ -79,17 +79,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2308}
     - Class: 114
-      Script: {instanceID: 2766}
+      Script: {instanceID: 2768}
     - Class: 114
-      Script: {instanceID: 2958}
+      Script: {instanceID: 2960}
     - Class: 114
-      Script: {instanceID: 3206}
+      Script: {instanceID: 3208}
     - Class: 114
-      Script: {instanceID: 3468}
+      Script: {instanceID: 3470}
     - Class: 114
-      Script: {instanceID: 3598}
+      Script: {instanceID: 3600}
     - Class: 114
-      Script: {instanceID: 5402}
+      Script: {instanceID: 5404}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -152,29 +152,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2308}
     - Class: 114
-      Script: {instanceID: 2766}
+      Script: {instanceID: 2624}
     - Class: 114
-      Script: {instanceID: 2958}
+      Script: {instanceID: 2768}
     - Class: 114
-      Script: {instanceID: 3206}
+      Script: {instanceID: 2960}
     - Class: 114
-      Script: {instanceID: 3468}
+      Script: {instanceID: 3208}
     - Class: 114
-      Script: {instanceID: 3598}
+      Script: {instanceID: 3470}
     - Class: 114
-      Script: {instanceID: 3868}
+      Script: {instanceID: 3600}
     - Class: 114
-      Script: {instanceID: 3986}
+      Script: {instanceID: 3870}
     - Class: 114
-      Script: {instanceID: 4050}
+      Script: {instanceID: 3988}
     - Class: 114
-      Script: {instanceID: 4100}
+      Script: {instanceID: 4052}
     - Class: 114
-      Script: {instanceID: 5000}
+      Script: {instanceID: 4102}
     - Class: 114
-      Script: {instanceID: 5918}
+      Script: {instanceID: 5002}
     - Class: 114
-      Script: {instanceID: 6140}
+      Script: {instanceID: 5920}
+    - Class: 114
+      Script: {instanceID: 6142}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -229,19 +231,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2308}
     - Class: 114
-      Script: {instanceID: 2766}
+      Script: {instanceID: 2768}
     - Class: 114
-      Script: {instanceID: 2958}
+      Script: {instanceID: 2960}
     - Class: 114
-      Script: {instanceID: 3206}
+      Script: {instanceID: 3208}
     - Class: 114
-      Script: {instanceID: 3468}
+      Script: {instanceID: 3470}
     - Class: 114
-      Script: {instanceID: 3598}
+      Script: {instanceID: 3600}
     - Class: 114
-      Script: {instanceID: 4860}
+      Script: {instanceID: 4862}
     - Class: 114
-      Script: {instanceID: 5402}
+      Script: {instanceID: 5404}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -465,6 +467,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: IKManager2D
+  - hash:
+      serializedVersion: 2
+      Hash: 6dd7cf5c31d9e385ea855b17012ed252
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameDifficulty
   - hash:
       serializedVersion: 2
       Hash: 62824bb9557c7e987502f2fbd2a26819
@@ -698,7 +706,7 @@ ScriptsOnlyBuild:
       Hash: 5739a0c83a068dcce19c8d97062d67c3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Shoot
+    className: EnemyShoot
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -935,7 +943,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyMovement
@@ -1079,10 +1087,10 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: SpikeMovement
+    className: BulletMovement
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1127,7 +1135,7 @@ ScriptsOnlyBuild:
     className: FabrikSolver2D
   - hash:
       serializedVersion: 2
-      Hash: 0ba9ccac89db4140e721e4995b76a8a3
+      Hash: 85975bcf651ed1815586054ada7b7368
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player

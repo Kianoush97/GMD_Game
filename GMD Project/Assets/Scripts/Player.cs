@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,41 +5,30 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     private Rigidbody2D rb;
-    [SerializeField] private float horizontalVelocity = 15f;
-    [SerializeField] private float jumpForce = 15f;
-    public Animator animator;
     private float horizontalDirection = 0f;
     private SpriteRenderer sprite;
-
     public static int score = 0;
-    private int topScore = 0;
-    public Text scoreText;
-    public Text topScoreText;
-
+    [SerializeField] private float playerSpeed = 15f;
+    [SerializeField] private float jumpForce = 15f;
+    [SerializeField] private Animator animator;
+    [SerializeField] private int topScore = 0;
+    [SerializeField] private Text scoreText;
+    [SerializeField] private Text topScoreText;
+    [SerializeField] private Text currentDifficaltyLevel;
     [SerializeField] private AudioSource jumpSound;
 
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         topScore = PlayerPrefs.GetInt("topScore", topScore);
     }
 
-    void Update()
+    private void Update()
     {
         horizontalDirection = Input.GetAxisRaw("Horizontal");
         transform.rotation = Quaternion.Euler(0, 0, 0);
-
-        if (score > 350 && score < 750)
-        {
-            jumpForce = 20;
-            horizontalVelocity = 20;
-        }
-        else if (score > 750)
-        {
-            jumpForce = 25;
-            horizontalVelocity = 25;
-        }
+        currentDifficaltyLevel.text = "Level: " + GetComponent<GameDifficulty>().difficaltyLevel.ToString();
 
         PlayerMovement();
         UpdateAnimation();
@@ -64,7 +51,7 @@ public class Player : MonoBehaviour
         {
             sprite.flipX = true;
         }
-        rb.velocity = new Vector2(horizontalDirection * horizontalVelocity, rb.velocity.y);
+        rb.velocity = new Vector2(horizontalDirection * playerSpeed, rb.velocity.y);
     }
 
     private void UpdateAnimation()
@@ -100,9 +87,18 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("EnemyBullet"))
         {
             SceneManager.LoadScene("GameOverScene");
         }
+    }
+
+    public void SetSpeed(float speed) 
+    {
+        jumpForce = 15f + speed;
+        playerSpeed = 15f + speed;
+
+        print("jumpForce: " + jumpForce);
+        print("velocity: " + playerSpeed);
     }
 }
