@@ -5,7 +5,7 @@ public class GameDifficulty : MonoBehaviour
     public int level = 1;
     private readonly int maxLevel = 8;
     private int levelUpScore = 250;
-    private readonly float respawnTime = .2f;
+    private readonly float respawnTime = .3f;
     private float speed =0;
 
     void Update()

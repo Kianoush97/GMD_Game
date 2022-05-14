@@ -10,7 +10,7 @@ public class BulletMovement : MonoBehaviour
     private void Start()
     {
        rb = GetComponent<Rigidbody2D>();
-        bulletSpeed = 8f;
+       bulletSpeed = 8f;
     }
 
     private void Update()

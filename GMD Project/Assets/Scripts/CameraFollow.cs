@@ -18,24 +18,14 @@ public class CameraFollow : MonoBehaviour
 
         if (targetToFollow.position.y + 17 < transform.position.y)
         {
-            LoadGameOverScene();
+            SceneManager.LoadScene("GameOverScene");
         }
 
         if (transform.position.y >= background2.position.y)
         {
-            background1.position = new Vector3(background1.position.x, background2.position.y + 55, background1.position.z);
-            SwitchBackground();
+            background1.position = new Vector2(background1.position.x, background2.position.y + 55);
+            (background2, background1) = (background1, background2);
 
         }
-    }
-
-    private void SwitchBackground()
-    {
-        (background2, background1) = (background1, background2);
-    }
-
-    public void LoadGameOverScene()
-    {
-        SceneManager.LoadScene("GameOverScene");
     }
 }

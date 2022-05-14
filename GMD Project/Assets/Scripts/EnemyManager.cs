@@ -34,7 +34,7 @@ public class EnemyManager : MonoBehaviour
         }
         a.transform.position = new Vector2(Random.Range(-screenBounds.x, screenBounds.x), (float)(screenBounds.y * 1.5));
 
-        if (Player.score > 1000)
+        if (Player.score > 800)
         {            
             b = Instantiate(circleMacePrefab);
             b.transform.position = new Vector2(Random.Range(-screenBounds.x +3 , screenBounds.x -3), (float)(screenBounds.y * 2));
@@ -58,6 +58,5 @@ public class EnemyManager : MonoBehaviour
     public void SetRespawnTime(float time)
     {
         respawnTime -= time;
-        print("Enemy respawn time: " + respawnTime);
     }
 }

@@ -30,12 +30,12 @@ public class EnemyShoot : MonoBehaviour
         while (true)
         {
             //Only Mace will shoot
-            if (Player.score > 350 && Player.score < 1000 && gameObject.name.Contains("Mace"))
+            if (Player.score > 350 && Player.score < 800 && gameObject.name.Contains("Mace"))
             {
                 yield return new WaitForSeconds(respawnTime);
                 spawnEnemySpike(enemy);
             }
-            else if (Player.score > 1000)
+            else if (Player.score > 800)
             {
                 // Both mace and saw will shoot
                 yield return new WaitForSeconds(respawnTime);
@@ -48,6 +48,5 @@ public class EnemyShoot : MonoBehaviour
     public void SetRespawnTime(float time)
     {
         respawnTime -= time;
-        print("EnemyShoot Respawn time:" + respawnTime);
     }
 }

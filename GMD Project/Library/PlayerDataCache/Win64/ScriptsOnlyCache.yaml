@@ -17,7 +17,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridBrushEditor
@@ -76,23 +75,23 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1520}
+      Script: {instanceID: 1524}
     - Class: 114
-      Script: {instanceID: 2032}
+      Script: {instanceID: 2036}
     - Class: 114
-      Script: {instanceID: 2308}
+      Script: {instanceID: 2312}
     - Class: 114
-      Script: {instanceID: 2768}
+      Script: {instanceID: 2770}
     - Class: 114
-      Script: {instanceID: 2960}
+      Script: {instanceID: 2962}
     - Class: 114
-      Script: {instanceID: 3208}
+      Script: {instanceID: 3210}
     - Class: 114
-      Script: {instanceID: 3470}
+      Script: {instanceID: 3472}
     - Class: 114
-      Script: {instanceID: 3600}
+      Script: {instanceID: 3602}
     - Class: 114
-      Script: {instanceID: 5404}
+      Script: {instanceID: 5406}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -147,39 +146,39 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1520}
+      Script: {instanceID: 1524}
     - Class: 114
-      Script: {instanceID: 1834}
+      Script: {instanceID: 1838}
     - Class: 114
-      Script: {instanceID: 2032}
+      Script: {instanceID: 2036}
     - Class: 114
-      Script: {instanceID: 2308}
+      Script: {instanceID: 2312}
     - Class: 114
-      Script: {instanceID: 2624}
+      Script: {instanceID: 2626}
     - Class: 114
-      Script: {instanceID: 2768}
+      Script: {instanceID: 2770}
     - Class: 114
-      Script: {instanceID: 2960}
+      Script: {instanceID: 2962}
     - Class: 114
-      Script: {instanceID: 3208}
+      Script: {instanceID: 3210}
     - Class: 114
-      Script: {instanceID: 3470}
+      Script: {instanceID: 3472}
     - Class: 114
-      Script: {instanceID: 3600}
+      Script: {instanceID: 3602}
     - Class: 114
-      Script: {instanceID: 3870}
+      Script: {instanceID: 3872}
     - Class: 114
-      Script: {instanceID: 3988}
+      Script: {instanceID: 3990}
     - Class: 114
-      Script: {instanceID: 4052}
+      Script: {instanceID: 4054}
     - Class: 114
-      Script: {instanceID: 4102}
+      Script: {instanceID: 4104}
     - Class: 114
-      Script: {instanceID: 5002}
+      Script: {instanceID: 5004}
     - Class: 114
-      Script: {instanceID: 5920}
+      Script: {instanceID: 5922}
     - Class: 114
-      Script: {instanceID: 6142}
+      Script: {instanceID: 6144}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -226,27 +225,27 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1520}
+      Script: {instanceID: 1524}
     - Class: 114
-      Script: {instanceID: 1834}
+      Script: {instanceID: 1838}
     - Class: 114
-      Script: {instanceID: 2032}
+      Script: {instanceID: 2036}
     - Class: 114
-      Script: {instanceID: 2308}
+      Script: {instanceID: 2312}
     - Class: 114
-      Script: {instanceID: 2768}
+      Script: {instanceID: 2770}
     - Class: 114
-      Script: {instanceID: 2960}
+      Script: {instanceID: 2962}
     - Class: 114
-      Script: {instanceID: 3208}
+      Script: {instanceID: 3210}
     - Class: 114
-      Script: {instanceID: 3470}
+      Script: {instanceID: 3472}
     - Class: 114
-      Script: {instanceID: 3600}
+      Script: {instanceID: 3602}
     - Class: 114
-      Script: {instanceID: 4862}
+      Script: {instanceID: 4864}
     - Class: 114
-      Script: {instanceID: 5404}
+      Script: {instanceID: 5406}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -466,7 +465,7 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
-      Hash: 6dd7cf5c31d9e385ea855b17012ed252
+      Hash: cc560a463228beaed93030640a0d386f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameDifficulty
@@ -1141,4 +1140,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/MenuScene.unity
   - Assets/Scenes/GameScene.unity
   - Assets/Scenes/GameOverScene.unity
-  playerPath: C:/Users/kiano/OneDrive/Desktop/GameTest/GMD Project.exe
+  playerPath: C:/Users/kiano/OneDrive/Desktop/GameTest/Fly Dude, Fly!.exe

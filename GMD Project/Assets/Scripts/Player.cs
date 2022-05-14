@@ -85,20 +85,9 @@ public class Player : MonoBehaviour
         TextManager.totalScore = scoreText.text;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("EnemyBullet"))
-        {
-            SceneManager.LoadScene("GameOverScene");
-        }
-    }
-
     public void SetSpeed(float speed) 
     {
         jumpForce = 15f + speed;
         playerSpeed = 15f + speed;
-
-        print("jumpForce: " + jumpForce);
-        print("velocity: " + playerSpeed);
     }
 }
