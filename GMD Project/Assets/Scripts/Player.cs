@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     {
         horizontalDirection = Input.GetAxisRaw("Horizontal");
         transform.rotation = Quaternion.Euler(0, 0, 0);
-        currentDifficaltyLevel.text = "Level: " + GetComponent<GameDifficulty>().difficaltyLevel.ToString();
+        currentDifficaltyLevel.text = "Level: " + GetComponent<GameDifficulty>().level.ToString();
 
         PlayerMovement();
         UpdateAnimation();

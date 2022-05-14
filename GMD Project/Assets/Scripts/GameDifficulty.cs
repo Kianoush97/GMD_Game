@@ -2,28 +2,28 @@ using UnityEngine;
 
 public class GameDifficulty : MonoBehaviour
 {   
-    public int difficaltyLevel = 1;
-    private readonly int maxDifficaltyLevel = 8;
-    private int nextLevelDifficalty = 250;
+    public int level = 1;
+    private readonly int maxLevel = 8;
+    private int levelUpScore = 250;
     private readonly float respawnTime = .2f;
     private float speed =0;
 
     void Update()
     {
-        if (Player.score >= nextLevelDifficalty)
+        if (Player.score >= levelUpScore)
             LevelUpDifficalty();
     }
 
     private void LevelUpDifficalty() 
     {
-        if (difficaltyLevel == maxDifficaltyLevel)
+        if (level == maxLevel)
         {
             return;
         }
         else
         {
-            nextLevelDifficalty *= 2;         
-            difficaltyLevel+=1;
+            levelUpScore *= 2;         
+            level+=1;
             speed += 2f;
 
             if(gameObject.CompareTag("Player"))
@@ -36,9 +36,7 @@ public class GameDifficulty : MonoBehaviour
             }
 
             if (gameObject.CompareTag("MainCamera"))
-                gameObject.GetComponent<EnemyManager>().SetRespawnTime(respawnTime);
-            
-            print("Difficalty Level: " + difficaltyLevel);
+                gameObject.GetComponent<EnemyManager>().SetRespawnTime(respawnTime);            
         }
 
     }
