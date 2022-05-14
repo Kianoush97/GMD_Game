@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] Sprite SoundOnImage;
     [SerializeField] Sprite SoundOffImage;
     [SerializeField] AudioSource audioSource;
-    void Start()
+    private void Start()
     {
         soundOn = PlayerPrefs.GetInt("soundOn", soundOn);
 

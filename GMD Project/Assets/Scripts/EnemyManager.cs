@@ -32,12 +32,12 @@ public class EnemyManager : MonoBehaviour
         {
             a = Instantiate(sawPrefab);
         }
-        a.transform.position = new Vector2(Random.Range(-screenBounds.x, screenBounds.x), (float)(screenBounds.y * 1.5));
+        a.transform.position = new Vector2(Random.Range(-screenBounds.x + 3, screenBounds.x - 3), (float)(screenBounds.y + 80));
 
         if (Player.score > 800)
         {            
             b = Instantiate(circleMacePrefab);
-            b.transform.position = new Vector2(Random.Range(-screenBounds.x +3 , screenBounds.x -3), (float)(screenBounds.y * 2));
+            b.transform.position = new Vector2(Random.Range(-screenBounds.x +3 , screenBounds.x -3), (float)(screenBounds.y + 300));
         } 
     }
 
