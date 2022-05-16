@@ -9,10 +9,10 @@ public class CameraFollow : MonoBehaviour
 
     private void LateUpdate()
     {
-        if(targetToFollow.position.y + 8 > transform.position.y)
+        if(targetToFollow.position.y + 9 > transform.position.y)
         {
             Vector3 newPosition = new Vector3(transform.position.x,
-            targetToFollow.position.y + 8, transform.position.z);
+            targetToFollow.position.y + 9, transform.position.z);
             transform.position = newPosition;
         }
 

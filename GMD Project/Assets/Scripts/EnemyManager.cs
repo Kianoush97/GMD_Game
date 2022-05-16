@@ -6,6 +6,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private GameObject macePrefab;
     [SerializeField] private GameObject sawPrefab;
     [SerializeField] private GameObject circleMacePrefab;
+    [SerializeField] private GameObject maceWithChainPrefab;
     [SerializeField] private float respawnTime = 4f;
     private Vector2 screenBounds;
 
@@ -24,19 +25,20 @@ public class EnemyManager : MonoBehaviour
         GameObject a;
         GameObject b;
 
-        if (Random.Range(0, 3)%2 == 0)
-        {
+        if (Random.Range(0, 3) == 1)
             a = Instantiate(macePrefab);
-        }
         else
-        {
             a = Instantiate(sawPrefab);
-        }
+
         a.transform.position = new Vector2(Random.Range(-screenBounds.x + 3, screenBounds.x - 3), (float)(screenBounds.y + 80));
 
         if (Player.score > 800)
-        {            
-            b = Instantiate(circleMacePrefab);
+        {   
+            if(Random.Range(1,3) == 1)
+                b = Instantiate(circleMacePrefab);
+            else 
+                b = Instantiate(maceWithChainPrefab);
+
             b.transform.position = new Vector2(Random.Range(-screenBounds.x +3 , screenBounds.x -3), (float)(screenBounds.y + 300));
         } 
     }

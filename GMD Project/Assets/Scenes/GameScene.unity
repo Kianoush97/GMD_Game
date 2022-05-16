@@ -1051,6 +1051,7 @@ MonoBehaviour:
   macePrefab: {fileID: 5492685822256954103, guid: c92ddce8ebf849a45bc8744f26ef9b97, type: 3}
   sawPrefab: {fileID: 114360148742914551, guid: f6bf2b6a36593ea4684e150d795bdc2b, type: 3}
   circleMacePrefab: {fileID: 7481983151684275193, guid: 10f681a5377e7044198ecfbef2815cfc, type: 3}
+  maceWithChainPrefab: {fileID: 1497740183810097443, guid: 5ca499e3a9d6de7408c0922e378da8fb, type: 3}
   respawnTime: 3
 --- !u!20 &519420031
 Camera:
@@ -1141,7 +1142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef87e488b6d83cb4ea84dd580ab0341a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficaltyLevel: 1
+  level: 1
 --- !u!1001 &554306053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2420,7 +2421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef87e488b6d83cb4ea84dd580ab0341a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficaltyLevel: 1
+  level: 1
 --- !u!4 &1598959824 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4783939498311468745, guid: 400521e8c7f8b234b9203d76bd062bda, type: 3}
