@@ -1,6 +1,6 @@
 YouTube link: https://youtu.be/qk4nDuUEDl8
 
-Link to play game (WebGL build): https://play.unity.com/mg/other/gmd_flydudefly
+Link to play game (WebGL build): https://play.unity.com/mg/other/flydudefly
 
 Resources:
 
