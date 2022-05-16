@@ -25,7 +25,7 @@ public class EnemyManager : MonoBehaviour
         GameObject a;
         GameObject b;
 
-        if (Random.Range(0, 3) == 1)
+        if (Random.Range(1, 3) == 1)
             a = Instantiate(macePrefab);
         else
             a = Instantiate(sawPrefab);
